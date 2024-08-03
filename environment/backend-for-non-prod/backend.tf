@@ -5,7 +5,7 @@ provider "aws" {
 
 #############S3 STATE BUCKET###########################
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "kpi-non-prod-terraform-state-storage-s3"
+  bucket = "non-prod-terraform-state-storage-s3"
   versioning {
       enabled = true
   }
@@ -20,7 +20,7 @@ resource "aws_s3_bucket" "mybucket" {
 
 #############DYNAMODB TABLE###########################
 resource "aws_dynamodb_table" "state-lock" {
-    name           = "kpi-non-prod-terraform-state-lock-dynamodb"
+    name           = "non-prod-terraform-state-lock-dynamodb"
     billing_mode = "PAY_PER_REQUEST"
     hash_key       = "LockID"
 
