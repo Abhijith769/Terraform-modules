@@ -1,4 +1,4 @@
-output "infithra_non-prod_vpc_id" {
+output "non-prod_vpc_id" {
   value = module.vpc.vpc_id
-  description = "vpc id of the non-pord infithra vpc"
+  description = "vpc id of the non-pord vpc"
 }
